@@ -25,10 +25,90 @@
 }
 
 nav {
-    background-color: aquamarine ;
+    background-color: #053a3d ;
     grid-area: nav;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+}
+
+#burger {
+    width: 7%;
+    height: 7vw;
+    position: absolute;
+    margin-right: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform: .5s ease-in-out;
+    -moz-transform: .5s ease-in-out;
+    -o-transform: .5s ease-in-out;
+    transform: .5s ease-in-out;
+}
+
+#burger span {
+    display: block;
+    position: absolute;
+    height: 1vw;
+    width: 100%;
+    background: #aac6c6;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform: .25s ease-in-out;
+    -moz-transform: .25s ease-in-out;
+    -o-transform: .25s ease-in-out;
+    transform: .25s ease-in-out;
+}
+
+#burger span:nth-child(1) {
+    top: 0px;
+}
+#burger span:nth-child(2), 
+#burger span:nth-child(3) {
+    top: 25px;
+}
+
+#burger span:nth-child(4) {
+    top: 50px;
+}
+
+#burger.open {
+    position: fixed;
+}
+
+#burger.open span {
+    background: #52e1e2;
+}
+
+#burger.open span:nth-child(1) {
+    top: 25px;
+    width: 0%;
+    left: 50%;
+}
+
+#burger.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#burger.open span:nth-child(3) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#burger.open span:nth-child(4) {
+    top: 50px;
+    width: 0%;
+    left: 50%;
 }
 
 main { 
