@@ -3,18 +3,18 @@
     --main-padding:5px;
 }
 
-
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr 0.5fr;
     grid-template-areas: 
-        "nav nav nav nav nav"
-        "sidebar main main main main"
-        "sidebar content1 content2 content3 addbar"
-        "sidebar content4 content5 content6 addbar"
-        "footer footer footer footer footer";
+        "nav nav nav nav nav nav"
+        "sidebar main main main main main"
+        "sidebar content1 content1 content1 content2 addbar"
+        "sidebar content1 content1 content1 content3 addbar"
+        "sidebar content4 content4 content4 content4 addbar"
+        "footer footer footer footer footer footer";
     grid-gap: 0.2rem;
     font-family: "Comfortaa", sans-serif;
     font-weight: 800;
@@ -132,7 +132,10 @@ main {
     padding-top: var(--main-padding);
 }
 
-a {
+.button-main {
+    color: #A5F6E1;
+}
+/* a {
     position: relative;
     padding: 20px 50px;
     display: block;
@@ -199,7 +202,7 @@ a:hover .liquid {
     100% {
         transform: translate(-50%, -75%) rotate(360deg);
     }
-}
+} */
 
 
 
@@ -220,20 +223,6 @@ a:hover .liquid {
 #content4 {
     background-color: #b86aa7;
     grid-area: content4;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
-}
-
-#content5 {
-    background-color: #dddb79;
-    grid-area: content5;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
-}
-
-#content6 {
-    background-color: #94c474;
-    grid-area: content6;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
