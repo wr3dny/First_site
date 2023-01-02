@@ -1,0 +1,49 @@
+:root {
+    --main-radius:5px;
+    --main-padding:5px;
+}
+
+.loaders_container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "loader1 loader2 loader3 loader4 loader5"
+        "loader6 loader7 loader8 loader9 loader10"
+        "loader11 loader12 loader13 loader14 loader15";
+    grid-gap: 0.2rem;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+}
+
+
+.loader_ring {
+    display: inline;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+  }
+  .loader_ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid rgb(184, 32, 70);
+    border-color: rgb(131, 29, 29) transparent rgb(255, 255, 255) transparent;
+    animation: loader_ring 1.2s linear infinite;
+  }
+  @keyframes loader_ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
